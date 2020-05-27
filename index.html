@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title> facilitator</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <link rel="stylesheet" href="facilitator.css">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+ <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+ <script >
+   function getfocustxt(){
+     document.getElementById("name").focus();
+    
+   }
+ </script>
+ <style>
+  .imp:after {
+    content:" *";
+    color: red;
+  }
+</style>
+</head>
+<body onload="getfocustxt();">
+ <div class="wrapper">
+    <div class= "title">
+      BECOME A CHANGEMAKER 
+    </div>
+    <form method="" id="form" >
+     <div class="form">
+       <label class="imp"> Name </label>
+       <div class="inputfield">
+      
+          <input type="text" class="input" id="name"  placeholder="Enter name" required>       
+          
+       </div>  
+       <label class="imp"> Email </label>
+        <div class="inputfield">
+         
+          <input type="email" class="input" id="email" placeholder="Enter email"  required>
+          
+       </div> 
+       <label class="imp"> Mobile No </label>
+      <div class="inputfield">
+                  
+          <input type="tel" class="input"  placeholder="Enter mobile no"  id="phone"  pattern="^\d{10}$" required>
+          
+       </div>  
+       <label class="imp"> Experience </label>
+      <div class="inputfield">
+       <input type="text" name="exp" list="List" placeholder="Select" size="55" style="height: 30px;"required>
+           <datalist id="List">
+            <option value="3-6 yrs">  
+            <option value="6-10 yrs">
+            <option value="10+ yrs">
+       </datalist>
+      </div>
+       <label>Training Experience</label>
+      <div class="inputfield">
+         <input type="text" name="exp" list="List" placeholder="Select" size="55" style="height: 30px;">
+           <datalist id="List">
+            <option value="3-6 yrs">  
+            <option value="6-10 yrs">
+            <option value="10+ yrs">
+       </datalist>
+       </div>
+       <label>Resume </label>
+      <div class="inputfield">
+        
+        <input type="file" title="Attach resume in doc/pdf format" accept=".pdf,.doc">
+       </div>
+       <label> LinkedIn Profile</label>
+      <div class="inputfield">
+        <input type="url" name="url" id="url" placeholder="Enter LinkedIn Profile Link" pattern="^http(s)?:\/\/(www\.)?linkedin\.com\/in\/.*$" size="55" style="height: 30px;">
+       </div>
+      <label> Video Bite</label>
+      <div class="inputfield">
+       
+        <input type="file" name="file" placeholder="Send your 1min videobite"  accept="video/*">
+       </div>
+       <label>Suggestions/Questions</label>
+      <div class="inputfield">
+       
+       <textarea rows="6"cols="80"placeholder="Enter Questions or give Suggestions" id="description"></textarea>
+       </div>
+     <div class="submit">
+        <input type="submit" value="submit">
+    </div>
+   </div>
+
+</form>
+</body>
+</html>
